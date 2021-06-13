@@ -7,7 +7,7 @@ from itertools import product
 #N is the system's size
 
 #Constructing the Hamiltonian matrix by considering its action towards sigma-z basis states
-def method1_hamiltonian(h, N):
+def method1_hamiltonian(h,J,N):
     mat = np.zeros((2**N,2**N))
     bitsequence = [list(x) for x in product([1,0],repeat =N)]
     for sequence in bitsequence:
@@ -25,7 +25,7 @@ def method1_hamiltonian(h, N):
     return mat
 
 #Constructing the Hamiltonian matrix by kronecker product
-def method2_hamiltonian(h,N):
+def method2_hamiltonian(h,J,N):
     pauli_plus = np.array([[0,1],[0,0]])
     pauli_minus = np.array([[0,0],[1,0]])
     pauliz = np.array([[1,0],[0,-1]])
@@ -42,4 +42,4 @@ def method2_hamiltonian(h,N):
         else:
             hopping = -np.kron(np.kron(np.identity(2**i), np.kron(pauli_plus, pauli_minus)), np.identity(2**(N-i-2)))
             mat+= h*np.kron(np.kron(np.identity(2**i),pauliz), np.identity(2**(N-i-1)))
-       return mat 
+    return mat 
