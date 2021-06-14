@@ -42,4 +42,5 @@ def method2_hamiltonian(h,J,N):
         else:
             hopping = -np.kron(np.kron(np.identity(2**i), np.kron(pauli_plus, pauli_minus)), np.identity(2**(N-i-2)))
             mat+= h*np.kron(np.kron(np.identity(2**i),pauliz), np.identity(2**(N-i-1)))
+            mat+=hopping+np.conj(hopping.T)
     return mat 
