@@ -5,7 +5,7 @@ MAIN FUNCTIONS: method1_hamiltonian(h,J,N), method2_hamiltonian(h,J,N)
 
 INPUT: h (magnetic field strength), J (nearest-neighbor interaction strength), N (system's size (integer))
 
-OUTPUT: Hamiltonian matrix in the form of np.array**
+OUTPUT: Hamiltonian matrix in the form of np.array
 
 method1 computes the Hamiltonian by considering its action to the Pauli-Z basis states
 method2 computes the Hamiltonian directly through kronecker product operation
