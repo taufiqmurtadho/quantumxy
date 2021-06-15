@@ -9,3 +9,9 @@ OUTPUT: Hamiltonian matrix in the form of numpy array
 
 method1 computes the Hamiltonian by considering its action to the Pauli-Z basis states
 method2 computes the Hamiltonian directly through kronecker product operation
+
+HOW TO INSTALL & USE: In the package directory run 
+
+pip install .
+
+To use, type "import src.quantumxy" in python 
