@@ -5,5 +5,5 @@ setup(
     version = '1.0',
     author = 'Taufiq Murtadho',
     author_email = 'fiqmurtadho@gmail.com',
-    packages = find_packages('src')
+    packages = find_packages('quantumxy')
     )
