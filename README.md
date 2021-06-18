@@ -1,17 +1,16 @@
 # quantumxy
-Python simulation of a quantum spin chain on a ring (1D chain periodic boundary condition) under a Hamiltonian with XY-interaction and external magnetic field
+Python simulation of a 1D quantum spin chain on a ring under a Hamiltonian with XY-interaction and external magnetic field
 
-MAIN FUNCTIONS: method1_hamiltonian(h,J,N), method2_hamiltonian(h,J,N)
+## FUNCTION  
+```method1_hamiltonian(h,J,N)```: Constructing the Hamiltonian by its action toward Pauli-Z basis states
+```method2_hamiltonian(h,J,N)```:Constructing the Hamiltonian by direct kronecker product
 
-INPUT: h (magnetic field strength), J (nearest-neighbor interaction strength), N (system's size (integer))
+where h is magnetic field strength, J is nearest-neighbor interaction strength, and N is system's size (integer). The output of these functions is a ```numpy``` array of size 2^N x 2^N. 
 
-OUTPUT: Hamiltonian matrix in the form of numpy array
+## Setup
 
-method1 computes the Hamiltonian by considering its action to the Pauli-Z basis states
-method2 computes the Hamiltonian directly through kronecker product operation
+In the package directory, run the following command
 
-HOW TO INSTALL & USE: In the package directory run 
+```pip install``` 
 
-pip install .
-
-To use, type "import src.quantumxy" in python 
+To use, type ```import src.quantumxy``` in the Python shell
