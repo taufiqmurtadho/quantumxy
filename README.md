@@ -11,6 +11,6 @@ where h is magnetic field strength, J is nearest-neighbor interaction strength, 
 
 In the package directory, run the following command
 
-```pip install``` 
+```pip install .``` 
 
 To use, type ```import src.quantumxy``` in the Python shell
